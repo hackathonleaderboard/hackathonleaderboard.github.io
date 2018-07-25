@@ -1,5 +1,9 @@
+function doSomething(d){
+  console.log(d.User)
+  window.location.href = "https://devpost.com/" + d.User;
+}
 var tabulate = function (data,columns) {
-    var table = d3.select("#mycenterdiv").append('table').attr("class", "container");
+    var table = d3.select("#headTable").append('table').attr("class", "container").attr("style","font-family: 'Orbitron'");
       var thead = table.append('thead')
       var tbody = table.append('tbody')
   
@@ -14,6 +18,7 @@ var tabulate = function (data,columns) {
           .data(data)
           .enter()
         .append('tr')
+        .on("click", function(d) { doSomething(d); }) 
   
       var cells = rows.selectAll('td')
           .data(function(row) {

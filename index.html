@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 <style>
     /*	
       Side Navigation Menu V2, RWD
@@ -18,7 +19,7 @@
     */
 
     body {
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Obitron';
       font-weight: 300;
       line-height: 1.42em;
       color:#A7A1AE;
@@ -135,66 +136,61 @@
 <body>
 
 <!-- Navbar -->
-<div class="w3-top">
+<div style="font-family: 'Orbitron'" class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BAND</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TOUR</a>
+    <a href="#headTable" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LEADERBOARD</a>
     <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-    <div class="w3-dropdown-hover w3-hide-small">
-      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">Merchandise</a>
-        <a href="#" class="w3-bar-item w3-button">Extras</a>
-        <a href="#" class="w3-bar-item w3-button">Media</a>
-      </div>
-    </div>
+  </div>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; font-family: 'Orbitron'" >
+  <a href="#leaderboard" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LEADERBOARD</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
 </div>
 
 
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-        <div class="container">
-          <a href="/" class="lang-logo">
-            <img src="lang-logo.png">
-          </a>
-          <h1>Hackathon Leaderboard</h1>
-          <p>This is a Node application deployed to Heroku. It contains a ranking system for hackathon winners based 
-            on the number of awards and and the number of hackathons won.
-          </p>
-        </div>
-  </div>
 
-  <!-- The Contact Section -->
-  <div class="container">
-    <hr>
-    <div class="row">
-      <div class="col-md-6">
-        <h3 ><span class="glyphicon glyphicon-info-sign"></span>About this app</h3>
-        <ul>
-          <li>This app was deployed to Heroku using git and made in collabration between Elijah Elrod and Willie McClinton.</li>
-          <a type="button" class="w3-button w3-large" href="https://github.com/elijahelrod"><span class="glyphicon glyphicon-download"></span> Elijah's Github</a>
-          <a type="button" class="w3-button w3-large" href="https://github.com/wmcclinton"><span class="glyphicon glyphicon-download"></span> Willie's Github</a>
-        </ul>
-      </div>
-    </div> <!-- row -->
-  </div>
-
-  <div id="mycenterdiv" style="text-align:center; width: 100%;"> </div>
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+    <img class="w3-image" src="Michelangelo_-_Creation_of_Adam_Blue.jpg" alt="Adam" width="1500" height="800">
+    <div class="w3-display-middle w3-margin-top w3-center">
+      <h1 class="w3-xxlarge w3-text-white" style="font-family: 'Orbitron'"><span class="w3-padding w3-black w3-opacity-min"><b>Hackathon Leaderboard</b></span></br></br><span class="w3-hide-small w3-text-light-grey">What's Your Rank?</span></h1>
+    </div>
+  </header>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-  <script type='text/javascript' src='table.js'></script>
+    <div id="leaderboard" style="font-family: 'Orbitron'">
+        <h3 style="padding-left: 40px; font-family: 'Orbitron'" class="w3-border-bottom w3-border-black w3-black w3-padding-16">Global Ranking</h3>
+    </div>
+
   
+  <div id= "headTable"></div>
+  <div>
+    <script type='text/javascript' src='table.js'></script>
+  </div>
+      
+
+  <div id="contact">
+      <h3 style="padding-left: 40px; font-family: 'Orbitron'" class="w3-border-bottom w3-border-black w3-black w3-padding-16">About</h3>
+  </div>
+  
+    <!-- The Contact Section -->
+  </br>
+  <p style="padding-left: 40px">This website was made to showcase the greatest hackathoners of our time. It contains a ranking system for <a href="https://devpost.com/software/search?query=is%3Awinner">hackathon winners</a> based on the number of awards won at <a href="https://mlh.io/">hackathons</a>. This was made by a team of fellow hackathoners: Elijah Elrod, Jim Mirzakhalov, and Willie McClinton. Feel free to contact us with any recommendations for future updates. Let the hacking begin.</p>
+  <p style="padding-left: 40px"> Send recommendations to <b>wmcclinton(at)mail.usf.edu</b> with subject HACK-RANKER-TIPS</p>
+  </br>
+  <div style="padding-left: 40px; font-family: 'Orbitron'">
+  <button class="w3-button w3-large w3-black w3-hover-purple"> <a href="https://github.com/elijahelrod" >Elijah's Github</a></button>
+  <button class="w3-button w3-large w3-black w3-hover-purple"> <a href="https://github.com/mirzakhalov" >Jim's Github</a></button>
+  <button class="w3-button w3-large w3-black w3-hover-purple"> <a href="https://github.com/wmcclinton" >Willie's Github</a></button>
+</div>
+  </br>
+  </br>
+    
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -203,7 +199,7 @@
   <i class="fa fa-pinterest-p w3-hover-opacity"></i>
   <i class="fa fa-twitter w3-hover-opacity"></i>
   <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p class="w3-medium" style="font-family: 'Orbitron'">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
 </body>
