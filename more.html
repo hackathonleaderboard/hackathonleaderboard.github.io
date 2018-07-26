@@ -136,14 +136,9 @@
 <body>
 
 <!-- Navbar -->
-<div style="font-family: 'Orbitron'" class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="#headTable" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LEADERBOARD</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+<div>
     <a class="w3-padding-large w3-hover-red w3-hide-small w3-right"  onclick="myFunction()"><i class="fa fa-search"></i></a>
-    <input class="w3-black w3-right" type="text" id="myInput" style="margin-top: 5px" onKeyDown="if(event.keyCode==13) myFunction();" placeholder="Search for names..">
-  </div>
+    <input class="w3-black w3-right" type="text" id="myInput" style="margin-top: 5px; font-family: 'Orbitron'" onKeyDown="if(event.keyCode==13) myFunction();" placeholder="Search for names..">
 </div>
 
 <script>
@@ -170,46 +165,24 @@
     }
 </script>
 
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px; font-family: 'Orbitron'" >
-  <a href="#leaderboard" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LEADERBOARD</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-</div>
-
-
-
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-    <img class="w3-image" src="soa2.jpg" alt="Adam" width="1500" height="800">
-    <div class="w3-display-middle w3-margin-top w3-center">
-      <h1 class="w3-xxlarge w3-text-white" style="font-family: 'Orbitron'"><span class="w3-padding w3-black w3-opacity-min"><b>HackerBoard</b></span></br></br><span class="w3-hide-small w3-text-light-grey">What's Your Rank?</span></h1>
-    </div>
-  </header>
-
   <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-    <div id="leaderboard" style="font-family: 'Orbitron'">
-        <h3 style="padding-left: 40px; font-family: 'Orbitron'" class="w3-border-bottom w3-border-black w3-black w3-padding-16">Global Ranking</h3>
+  <div style="font-family: 'Orbitron'" class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+          <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+          <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+        </div>
     </div>
-
-  </br>
-
-    <div class="w3-center">
-        <button class="w3-button w3-xlarge w3-black w3-hover-purple" style="font-family: 'Orbitron'"> <a href="more.html" >See Full Leaderboard</a></button>
-      </div>
+      
+    <div id="leaderboard" style="font-family: 'Orbitron'">
+        <h3 style="padding-left: 40px; margin-top: 40px; font-family: 'Orbitron'" class="w3-border-bottom w3-border-black w3-black w3-padding-16">Global Ranking (Continued...)</h3>
+    </div>
 
   
   <div id= "headTable"></div>
   <div>
-    <script type='text/javascript' src='table.js'></script>
+    <script type='text/javascript' src='table_full.js'></script>
   </div>
 
-
-  <div class="w3-center">
-    <button class="w3-button w3-xlarge w3-black w3-hover-purple" style="font-family: 'Orbitron'"> <a href="more.html" >See Full Leaderboard</a></button>
-  </div>
-</br>
-</br>
-</br>
-  
   <div id="contact">
       <h3 style="padding-left: 40px; font-family: 'Orbitron'" class="w3-border-bottom w3-border-black w3-black w3-padding-16">About</h3>
   </div>
@@ -217,7 +190,7 @@
 
     <!-- The Contact Section -->
   </br>
-  <p style="padding-left: 40px">This website was made to showcase the greatest hackathoners of our time. It contains a ranking system for <a href="https://devpost.com/software/search?query=is%3Awinner">hackathon winners</a> based on the number of awards won in <a href="https://mlh.io/">hackathons</a>. This was made by a team of fellow hackathoners: Elijah Elrod, Jim Mirzakhalov, and Willie McClinton. Feel free to contact us with any recommendations for future updates. Let the hacking begin.</p>
+  <p style="padding-left: 40px">This website was made to showcase the greatest hackathoners of our time. It contains a ranking system for <a href="https://devpost.com/software/search?query=is%3Awinner">hackathon winners</a> based on the number of awards won at <a href="https://mlh.io/">hackathons</a>. This was made by a team of fellow hackathoners: Elijah Elrod, Jim Mirzakhalov, and Willie McClinton. Feel free to contact us with any recommendations for future updates. Let the hacking begin.</p>
   <p style="padding-left: 40px"> Send recommendations to <b>wmcclinton(at)mail.usf.edu</b> with subject HACK-RANKER-TIPS</p>
   </br>
   <div style="padding-left: 40px; font-family: 'Orbitron'">
@@ -227,17 +200,5 @@
 </div>
   </br>
   </br>
-    
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-instagram w3-hover-opacity"></i>
-  <i class="fa fa-snapchat w3-hover-opacity"></i>
-  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-  <i class="fa fa-twitter w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium" style="font-family: 'Orbitron'">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
-
 </body>
 </html>

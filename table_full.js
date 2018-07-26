@@ -33,7 +33,7 @@ var tabulate = function (data,columns) {
     return table;
   }
   
-  d3.csv('data.csv',function (data) {
+  d3.csv('data_full.csv',function (data) {
       var columns = ['Rank','User','Score']
     tabulate(data,columns)
   })
